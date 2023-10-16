@@ -9,7 +9,8 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:orientation="vertical">
+        android:orientation="vertical"
+        android:gravity="center_horizontal">
 
         <com.google.android.material.card.MaterialCardView
             android:layout_width="350dp"
@@ -95,41 +96,53 @@
                 </LinearLayout>
 
                 <LinearLayout
-                    android:layout_width="150dp"
-                    android:layout_height="wrap_content"
-                    android:layout_marginLeft="200dp"
-                    android:layout_marginBottom="0dp"
-                    android:background="@drawable/style_border_price"
-                    android:gravity="center"
-                    android:orientation="vertical">
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal">
 
-                    <TextView
-                        android:layout_width="wrap_content"
+                    <ImageButton
+                        android:layout_width="50dp"
+                        android:layout_height="match_parent"
+                        android:layout_marginLeft="50dp"
+
+                        android:src="@drawable/shop_icon" />
+
+                    <LinearLayout
+                        android:layout_width="150dp"
                         android:layout_height="wrap_content"
-                        android:text="Precio final por persona"
-                        android:textColor="@color/primaryDark"
+                        android:layout_marginLeft="98dp"
+                        android:layout_marginBottom="0dp"
+                        android:background="@drawable/style_border_price"
+                        android:gravity="center"
+                        android:orientation="vertical">
 
-                        android:textSize="12dp"></TextView>
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Precio final por persona"
+                            android:textColor="@color/primaryDark"
 
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:paddingStart="8dp"
-                        android:text="$1.176.000"
-                        android:textColor="@color/primaryDark"
-                        android:textSize="18dp"
+                            android:textSize="12dp"/>
 
-                        android:textStyle="bold"></TextView>
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:paddingStart="8dp"
+                            android:text="$1.176.000"
+                            android:textColor="@color/primaryDark"
+                            android:textSize="18dp"
 
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="Impuestos incluidos"
-                        android:textColor="@color/primaryDark"
-                        android:textSize="12dp"></TextView>
+                            android:textStyle="bold"/>
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Impuestos incluidos"
+                            android:textColor="@color/primaryDark"
+                            android:textSize="12dp"/>
+                    </LinearLayout>
                 </LinearLayout>
             </LinearLayout>
-
 
         </com.google.android.material.card.MaterialCardView>
     </LinearLayout>
