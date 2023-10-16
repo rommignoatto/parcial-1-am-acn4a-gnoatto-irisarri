@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+ <item android:id="@+id/nav_flight"
+     android:icon="@drawable/flight_icon"
+  android:title="Vuelos"/>
+
+ <item android:id="@+id/nav_hotel"
+     android:icon="@drawable/hotel_icon"
+     android:title="Hoteles"/>
+
+ <item android:id="@+id/nav_packages"
+     android:icon="@drawable/packages_icon"
+     android:title="Paquetes"/>
+
+ <item android:id="@+id/nav_menuHam"
+    android:icon="@drawable/menuham_icon"
+    android:title="Menu"/>
+
+
+</menu>
