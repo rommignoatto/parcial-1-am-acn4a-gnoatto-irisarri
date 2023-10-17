@@ -9,8 +9,10 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
+        android:gravity="center_horizontal"
         android:orientation="vertical"
-        android:gravity="center_horizontal">
+        tools:layout_editor_absoluteX="0dp"
+        tools:layout_editor_absoluteY="0dp">
 
         <com.google.android.material.card.MaterialCardView
             android:layout_width="350dp"
@@ -30,6 +32,7 @@
                     android:src="@drawable/londres" />
 
                 <TextView
+                    android:id="@+id/days"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginLeft="20dp"
@@ -48,6 +51,7 @@
                     android:orientation="vertical">
 
                     <TextView
+                        android:id="@+id/title"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_marginLeft="15dp"
@@ -66,6 +70,7 @@
                         android:orientation="horizontal">
 
                         <TextView
+                            android:id="@+id/flight"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_marginLeft="15dp"
@@ -75,6 +80,7 @@
                             android:textColor="@color/primaryDark" />
 
                         <TextView
+                            android:id="@+id/calendar"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_marginLeft="15dp"
@@ -85,6 +91,7 @@
                     </LinearLayout>
 
                     <TextView
+                        android:id="@+id/hotel"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_marginLeft="15dp"
@@ -100,31 +107,37 @@
                     android:layout_height="match_parent"
                     android:orientation="horizontal">
 
-                    <ImageButton
-                        android:layout_width="50dp"
+                    <Button
+                        android:id="@+id/buyButton"
+                        android:layout_width="wrap_content"
                         android:layout_height="match_parent"
                         android:layout_marginLeft="50dp"
-
-                        android:src="@drawable/shop_icon" />
+                        android:backgroundTint="@color/colorPrimary"
+                        android:padding="2dp"
+                        android:text="Comprar"
+                        android:textSize="13dp"
+                        app:cornerRadius="20dp" />
 
                     <LinearLayout
                         android:layout_width="150dp"
                         android:layout_height="wrap_content"
-                        android:layout_marginLeft="98dp"
-                        android:layout_marginBottom="0dp"
+                        android:layout_marginLeft="50dp"
+                        android:layout_marginBottom="5dp"
                         android:background="@drawable/style_border_price"
                         android:gravity="center"
                         android:orientation="vertical">
 
                         <TextView
+                            android:id="@+id/finalPrice"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:text="Precio final por persona"
                             android:textColor="@color/primaryDark"
 
-                            android:textSize="12dp"/>
+                            android:textSize="12dp" />
 
                         <TextView
+                            android:id="@+id/price"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:paddingStart="8dp"
@@ -132,14 +145,15 @@
                             android:textColor="@color/primaryDark"
                             android:textSize="18dp"
 
-                            android:textStyle="bold"/>
+                            android:textStyle="bold" />
 
                         <TextView
+                            android:id="@+id/tax"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:text="Impuestos incluidos"
                             android:textColor="@color/primaryDark"
-                            android:textSize="12dp"/>
+                            android:textSize="12dp" />
                     </LinearLayout>
                 </LinearLayout>
             </LinearLayout>
