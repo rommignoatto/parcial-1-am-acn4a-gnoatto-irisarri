@@ -5,169 +5,218 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".MainActivity">
-<ScrollView
-    android:layout_width="match_parent"
-    android:layout_height="700dp"
-    tools:ignore="MissingConstraints">
+
     <LinearLayout
+        android:id="@+id/header_main"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:gravity="center_horizontal"
-        android:orientation="vertical"
-        tools:layout_editor_absoluteX="0dp"
-        tools:layout_editor_absoluteY="0dp">
+        android:layout_height="50dp"
+        android:orientation="horizontal"
+        android:padding="5dp"
+        android:background="@color/colorPrimary"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
+        >
 
-        <com.google.android.material.card.MaterialCardView
-            android:layout_width="350dp"
+        <ImageView
+            android:id="@+id/profile_image"
+            android:layout_width="42dp"
+            android:layout_height="40dp"
+            android:layout_gravity="center_vertical"
+            android:src="@mipmap/ic_launcher_round" />
+
+        <TextView
+            android:id="@+id/marca"
+            android:layout_width="250dp"
             android:layout_height="wrap_content"
-            app:cardBackgroundColor="@color/cardBg">
+            android:text="Wardiere Travel"
+            android:textSize="18sp"
+            android:layout_gravity="center_vertical"
+            android:gravity="center"
+            android:layout_marginStart="16dp" />
 
-            <LinearLayout
-                android:layout_width="match_parent"
+        <ImageView
+            android:id="@+id/profile_icon"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:src="@drawable/baseline_person_24"
+            android:layout_gravity="center_vertical"
+            android:layout_marginStart="16dp" />
+
+
+    </LinearLayout>
+
+    <ScrollView
+        android:id="@+id/scrollView"
+        android:layout_width="0dp"
+        android:layout_height="600dp"
+        app:layout_constraintBottom_toTopOf="@+id/bottomNavigationView"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/header_main">
+
+        <LinearLayout
+            android:id="@+id/componentPackages"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center_horizontal"
+            android:orientation="vertical"
+            tools:layout_editor_absoluteX="0dp"
+            tools:layout_editor_absoluteY="0dp">
+
+            <com.google.android.material.card.MaterialCardView
+                android:layout_width="350dp"
                 android:layout_height="wrap_content"
-                android:orientation="vertical">
-
-                <ImageView
-                    android:id="@+id/imageView"
-                    android:layout_width="match_parent"
-                    android:layout_height="224dp"
-                    android:scaleType="centerCrop"
-                    android:src="@drawable/londres" />
-
-                <TextView
-                    android:id="@+id/days"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginLeft="20dp"
-                    android:background="@drawable/style_border_days"
-                    android:text="10 Días / 8 Noches"
-                    android:textColor="@color/white"
-                    android:textStyle="bold">
-
-                </TextView>
-
+                app:cardBackgroundColor="@color/cardBg">
 
                 <LinearLayout
-                    android:layout_width="wrap_content"
+                    android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_margin="8dp"
                     android:orientation="vertical">
 
+                    <ImageView
+                        android:id="@+id/imageView"
+                        android:layout_width="match_parent"
+                        android:layout_height="224dp"
+                        android:scaleType="centerCrop"
+                        android:src="@drawable/londres" />
+
                     <TextView
-                        android:id="@+id/title"
+                        android:id="@+id/days"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:layout_marginLeft="15dp"
-                        android:background="@color/cardBg"
-                        android:text="Londres histórica"
-                        android:textColor="@color/primaryDark"
+                        android:layout_marginLeft="20dp"
+                        android:background="@drawable/style_border_days"
+                        android:text="10 Días / 8 Noches"
+                        android:textColor="@color/white"
                         android:textStyle="bold">
 
                     </TextView>
 
-                    <LinearLayout
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_marginTop="8dp"
-
-                        android:orientation="horizontal">
-
-                        <TextView
-                            android:id="@+id/flight"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_marginLeft="15dp"
-                            android:layout_marginTop="8dp"
-                            android:drawableLeft="@drawable/flight_icon"
-                            android:text="BUE-BCN"
-                            android:textColor="@color/primaryDark" />
-
-                        <TextView
-                            android:id="@+id/calendar"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_marginLeft="15dp"
-                            android:layout_marginTop="8dp"
-                            android:drawableLeft="@drawable/outline_calendar_month_24"
-                            android:text="19 ENE - 28 ENE"
-                            android:textColor="@color/primaryDark" />
-                    </LinearLayout>
-
-                    <TextView
-                        android:id="@+id/hotel"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_marginLeft="15dp"
-                        android:layout_marginTop="8dp"
-                        android:drawableLeft="@drawable/hotel_icon"
-                        android:text="Chester Hotel Victoria"
-                        android:textColor="@color/primaryDark" />
-
-                </LinearLayout>
-
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:orientation="horizontal">
-
-                    <Button
-                        android:id="@+id/buyButton"
-                        android:layout_width="wrap_content"
-                        android:layout_height="match_parent"
-                        android:layout_marginLeft="50dp"
-                        android:backgroundTint="@color/colorPrimary"
-                        android:onClick="buyLondon"
-                        android:padding="2dp"
-                        android:text="Comprar"
-                        android:textSize="13dp"
-                        app:cornerRadius="20dp" />
 
                     <LinearLayout
-                        android:layout_width="150dp"
+                        android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:layout_marginLeft="50dp"
-                        android:layout_marginBottom="5dp"
-                        android:background="@drawable/style_border_price"
-                        android:gravity="center"
+                        android:layout_margin="8dp"
                         android:orientation="vertical">
 
                         <TextView
-                            android:id="@+id/finalPrice"
+                            android:id="@+id/title"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:text="Precio final por persona"
+                            android:layout_marginLeft="15dp"
+                            android:background="@color/cardBg"
+                            android:text="Londres histórica"
                             android:textColor="@color/primaryDark"
+                            android:textStyle="bold">
 
-                            android:textSize="12dp" />
+                        </TextView>
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="8dp"
+
+                            android:orientation="horizontal">
+
+                            <TextView
+                                android:id="@+id/flight"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="15dp"
+                                android:layout_marginTop="8dp"
+                                android:drawableLeft="@drawable/flight_icon"
+                                android:text="BUE-BCN"
+                                android:textColor="@color/primaryDark" />
+
+                            <TextView
+                                android:id="@+id/calendar"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="15dp"
+                                android:layout_marginTop="8dp"
+                                android:drawableLeft="@drawable/outline_calendar_month_24"
+                                android:text="19 ENE - 28 ENE"
+                                android:textColor="@color/primaryDark" />
+                        </LinearLayout>
 
                         <TextView
-                            android:id="@+id/price"
+                            android:id="@+id/hotel"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:paddingStart="8dp"
-                            android:text="$1.176.000"
-                            android:textColor="@color/primaryDark"
-                            android:textSize="18dp"
+                            android:layout_marginLeft="15dp"
+                            android:layout_marginTop="8dp"
+                            android:drawableLeft="@drawable/hotel_icon"
+                            android:text="Chester Hotel Victoria"
+                            android:textColor="@color/primaryDark" />
 
-                            android:textStyle="bold" />
+                    </LinearLayout>
 
-                        <TextView
-                            android:id="@+id/tax"
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="horizontal">
+
+                        <Button
+                            android:id="@+id/buyButton"
                             android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:layout_marginLeft="50dp"
+                            android:backgroundTint="@color/colorPrimary"
+                            android:onClick="buyLondon"
+                            android:padding="2dp"
+                            android:text="Comprar"
+                            android:textSize="13dp"
+                            app:cornerRadius="20dp" />
+
+                        <LinearLayout
+                            android:layout_width="150dp"
                             android:layout_height="wrap_content"
-                            android:text="Impuestos incluidos"
-                            android:textColor="@color/primaryDark"
-                            android:textSize="12dp" />
+                            android:layout_marginLeft="50dp"
+                            android:layout_marginBottom="5dp"
+                            android:background="@drawable/style_border_price"
+                            android:gravity="center"
+                            android:orientation="vertical">
+
+                            <TextView
+                                android:id="@+id/finalPrice"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Precio final por persona"
+                                android:textColor="@color/primaryDark"
+
+                                android:textSize="12dp" />
+
+                            <TextView
+                                android:id="@+id/price"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:paddingStart="8dp"
+                                android:text="$1.176.000"
+                                android:textColor="@color/primaryDark"
+                                android:textSize="18dp"
+
+                                android:textStyle="bold" />
+
+                            <TextView
+                                android:id="@+id/tax"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Impuestos incluidos"
+                                android:textColor="@color/primaryDark"
+                                android:textSize="12dp" />
+                        </LinearLayout>
                     </LinearLayout>
                 </LinearLayout>
-            </LinearLayout>
 
-        </com.google.android.material.card.MaterialCardView>
+            </com.google.android.material.card.MaterialCardView>
 
 
-    </LinearLayout>
-</ScrollView>
+        </LinearLayout>
+    </ScrollView>
+
     <FrameLayout
+        android:id="@+id/frameLayout"
         android:layout_width="0dp"
         android:layout_height="0dp"
         app:layout_constraintBottom_toTopOf="@+id/bottomNavigationView"
