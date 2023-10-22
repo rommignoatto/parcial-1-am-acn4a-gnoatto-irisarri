@@ -14,4 +14,9 @@
     <string name="BuenosAiresBarcelona">BUE-BCN</string>
     <string name="FechaBarcelona">10 FEB-21 FEB</string>
     <string name="HotelBarcelona">Acta Atrium Palace</string>
+    <string name="DiasParis">9 Dias / 7 Noches</string>
+    <string name="ParisSonada">Paris Soñada</string>
+    <string name="BuenosAiresParis">BUE-PAR</string>
+    <string name="FechaParis">19 MAR-27 MAR</string>
+    <string name="HotelParis">Hotel Charing Cross</string>
 </resources>
