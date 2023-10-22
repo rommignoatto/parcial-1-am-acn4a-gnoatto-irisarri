@@ -6,4 +6,5 @@
     <color name="primaryDark">#040404</color>
     <color name="cardBg">#D9D9D9</color>
     <color name="bgPrice">#EAE0EF</color>
+    <color name="comprado">#605C61</color>
 </resources>
