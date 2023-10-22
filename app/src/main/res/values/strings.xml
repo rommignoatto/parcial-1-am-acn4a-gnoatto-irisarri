@@ -3,10 +3,15 @@
     <string name="NombreMarca">Wardiere Travel</string>
     <string name="DiasLondres">10 Días / 8 Noches</string>
     <string name="LondresHistoria">Londres histórica</string>
-    <string name="BuenosAiresBarcelona">BUE-BCN</string>
+    <string name="BuenosAiresLondres">BUE-LON</string>
     <string name="FechaLondres">19 ENE - 28 ENE</string>
     <string name="HotelLondres">Chester Hotel Victoria</string>
     <string name="Comprar">Comprar</string>
     <string name="precio_final_por_persona">Precio final por persona</string>
     <string name="impuestos_incluidos">Impuestos incluidos</string>
+    <string name="DiasBarcelona">9 Dias / 7 Noches</string>
+    <string name="BarcelonaGaudi">Barcelona Gaudi</string>
+    <string name="BuenosAiresBarcelona">BUE-BCN</string>
+    <string name="FechaBarcelona">10 FEB-21 FEB</string>
+    <string name="HotelBarcelona">Acta Atrium Palace</string>
 </resources>

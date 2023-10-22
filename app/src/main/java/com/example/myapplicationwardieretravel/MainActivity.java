@@ -16,6 +16,7 @@ import android.widget.Toast;
 public class MainActivity extends AppCompatActivity {
 
     Button buyButtonLondon;
+    Button buyButtonBarcelona;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -23,7 +24,7 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
 
         buyButtonLondon = findViewById(R.id.buyButton);
-
+        buyButtonBarcelona = findViewById(R.id.buyButtonBarcelona);
 
 
     }
@@ -45,6 +46,16 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void buyLondon(View v){
+        buyButtonLondon.setText("Comprado");
+        buyButtonLondon.setEnabled(false);
+        buyButtonLondon.setBackgroundColor(getResources().getColor(R.color.comprado));
         Toast.makeText(this, "Compraste paquete Londres histórica", Toast.LENGTH_SHORT).show();
     }
+    public void buyBarcelona(View v){
+        buyButtonLondon.setText("Comprado");
+        buyButtonLondon.setEnabled(false);
+        buyButtonLondon.setBackgroundColor(getResources().getColor(R.color.comprado));
+        Toast.makeText(this, "Compraste paquete Barcelona Gaudi", Toast.LENGTH_SHORT).show();
+    }
+
 }
