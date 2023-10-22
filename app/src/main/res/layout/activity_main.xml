@@ -29,7 +29,7 @@
             android:id="@+id/marca"
             android:layout_width="250dp"
             android:layout_height="wrap_content"
-            android:text="Wardiere Travel"
+            android:text="@string/NombreMarca"
             android:textSize="18sp"
             android:layout_gravity="center_vertical"
             android:gravity="center"
@@ -87,7 +87,7 @@
                         android:layout_height="wrap_content"
                         android:layout_marginLeft="20dp"
                         android:background="@drawable/style_border_days"
-                        android:text="10 Días / 8 Noches"
+                        android:text="@string/DiasLondres"
                         android:textColor="@color/white"
                         android:textStyle="bold">
 
@@ -106,7 +106,7 @@
                             android:layout_height="wrap_content"
                             android:layout_marginLeft="15dp"
                             android:background="@color/cardBg"
-                            android:text="Londres histórica"
+                            android:text="@string/LondresHistoria"
                             android:textColor="@color/primaryDark"
                             android:textStyle="bold">
 
@@ -126,7 +126,7 @@
                                 android:layout_marginLeft="15dp"
                                 android:layout_marginTop="8dp"
                                 android:drawableLeft="@drawable/flight_icon"
-                                android:text="BUE-BCN"
+                                android:text="@string/BuenosAiresBarcelona"
                                 android:textColor="@color/primaryDark" />
 
                             <TextView
@@ -136,7 +136,7 @@
                                 android:layout_marginLeft="15dp"
                                 android:layout_marginTop="8dp"
                                 android:drawableLeft="@drawable/outline_calendar_month_24"
-                                android:text="19 ENE - 28 ENE"
+                                android:text="@string/FechaLondres"
                                 android:textColor="@color/primaryDark" />
                         </LinearLayout>
 
@@ -147,7 +147,7 @@
                             android:layout_marginLeft="15dp"
                             android:layout_marginTop="8dp"
                             android:drawableLeft="@drawable/hotel_icon"
-                            android:text="Chester Hotel Victoria"
+                            android:text="@string/HotelLondres"
                             android:textColor="@color/primaryDark" />
 
                     </LinearLayout>
@@ -165,7 +165,7 @@
                             android:backgroundTint="@color/colorPrimary"
                             android:onClick="buyLondon"
                             android:padding="2dp"
-                            android:text="Comprar"
+                            android:text="@string/Comprar"
                             android:textSize="13dp"
                             app:cornerRadius="20dp" />
 
@@ -182,7 +182,7 @@
                                 android:id="@+id/finalPrice"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
-                                android:text="Precio final por persona"
+                                android:text="@string/precio_final_por_persona"
                                 android:textColor="@color/primaryDark"
 
                                 android:textSize="12dp" />
@@ -202,7 +202,7 @@
                                 android:id="@+id/tax"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
-                                android:text="Impuestos incluidos"
+                                android:text="@string/impuestos_incluidos"
                                 android:textColor="@color/primaryDark"
                                 android:textSize="12dp" />
                         </LinearLayout>
