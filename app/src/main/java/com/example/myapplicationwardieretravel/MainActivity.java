@@ -54,15 +54,15 @@ public class MainActivity extends AppCompatActivity {
         Toast.makeText(this, "Compraste paquete Londres histórica", Toast.LENGTH_SHORT).show();
     }
     public void buyBarcelona(View v){
-        buyButtonLondon.setText("Comprado");
-        buyButtonLondon.setEnabled(false);
-        buyButtonLondon.setBackgroundColor(getResources().getColor(R.color.comprado));
+        buyButtonBarcelona.setText("Comprado");
+        buyButtonBarcelona.setEnabled(false);
+        buyButtonBarcelona.setBackgroundColor(getResources().getColor(R.color.comprado));
         Toast.makeText(this, "Compraste paquete Barcelona Gaudi", Toast.LENGTH_SHORT).show();
     }
     public void buyParis(View v){
-        buyButtonLondon.setText("Comprado");
-        buyButtonLondon.setEnabled(false);
-        buyButtonLondon.setBackgroundColor(getResources().getColor(R.color.comprado));
+        buyButtonParis.setText("Comprado");
+        buyButtonParis.setEnabled(false);
+        buyButtonParis.setBackgroundColor(getResources().getColor(R.color.comprado));
         Toast.makeText(this, "Compraste paquete Paris soñada", Toast.LENGTH_SHORT).show();
     }
 
