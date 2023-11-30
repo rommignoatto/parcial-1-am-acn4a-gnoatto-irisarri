@@ -2,6 +2,7 @@ package com.example.myapplicationwardieretravel;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuInflater;
@@ -19,6 +20,8 @@ public class MainActivity extends AppCompatActivity {
     Button buyButtonBarcelona;
     Button buyButtonParis;
 
+
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -30,6 +33,12 @@ public class MainActivity extends AppCompatActivity {
 
 
     }
+    public void openActivityHotel(View view){
+        Intent intent = new Intent(this, MainActivityHoteles.class);
+        startActivity(intent);
+
+    }
+
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         MenuInflater inflater = getMenuInflater();
