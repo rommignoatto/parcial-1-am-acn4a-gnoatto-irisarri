@@ -3,6 +3,7 @@ package com.example.myapplicationwardieretravel;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
+import android.os.AsyncTask;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuInflater;
@@ -14,11 +15,21 @@ import android.widget.ScrollView;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import java.io.FileOutputStream;
+import java.io.IOException;
+import java.io.InputStream;
+import java.io.OutputStream;
+import java.net.HttpURLConnection;
+import java.net.MalformedURLException;
+import java.net.URL;
+import java.net.URLConnection;
+
 public class MainActivity extends AppCompatActivity {
 
     Button buyButtonLondon;
     Button buyButtonBarcelona;
     Button buyButtonParis;
+
 
 
 
@@ -74,5 +85,7 @@ public class MainActivity extends AppCompatActivity {
         buyButtonParis.setBackgroundColor(getResources().getColor(R.color.comprado));
         Toast.makeText(this, "Compraste paquete Paris soñada", Toast.LENGTH_SHORT).show();
     }
+
+
 
 }
