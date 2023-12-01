@@ -43,6 +43,7 @@ public class MainActivity extends AppCompatActivity {
         buyButtonParis = findViewById(R.id.buyButtonParis);
 
 
+
     }
     public void openActivityHotel(View view){
         Intent intent = new Intent(this, MainActivityHoteles.class);
