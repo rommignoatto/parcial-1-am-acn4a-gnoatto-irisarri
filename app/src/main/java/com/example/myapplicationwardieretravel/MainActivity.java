@@ -5,6 +5,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.content.Intent;
 import android.os.AsyncTask;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.Menu;
 import android.view.MenuInflater;
 import android.view.MenuItem;
@@ -14,6 +15,9 @@ import android.widget.ImageView;
 import android.widget.ScrollView;
 import android.widget.TextView;
 import android.widget.Toast;
+
+import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.auth.FirebaseUser;
 
 import java.io.FileOutputStream;
 import java.io.IOException;
@@ -25,6 +29,7 @@ import java.net.URL;
 import java.net.URLConnection;
 
 public class MainActivity extends AppCompatActivity {
+    private FirebaseAuth mAuth;
 
     Button buyButtonLondon;
     Button buyButtonBarcelona;
@@ -37,6 +42,8 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+        mAuth = FirebaseAuth.getInstance();
+
 
         buyButtonLondon = findViewById(R.id.buyButton);
         buyButtonBarcelona = findViewById(R.id.buyButtonBarcelona);
@@ -45,6 +52,22 @@ public class MainActivity extends AppCompatActivity {
 
 
     }
+    //cuando abro y cierro la app se lanza el onStart, se guarda en la app
+    @Override
+    public void onStart() {
+        super.onStart();
+        // Check if user is signed in (non-null) and update UI accordingly.
+        FirebaseUser currentUser = mAuth.getCurrentUser();
+        if(currentUser != null){
+            Log.i("firebase", "hay usuario");
+        } else {
+            Log.i("firebase", "deberia loguearme porque no hay usuario");
+
+        }
+
+    }
+
+
     public void openActivityHotel(View view){
         Intent intent = new Intent(this, MainActivityHoteles.class);
         startActivity(intent);
