@@ -61,10 +61,15 @@ public class MainActivity extends AppCompatActivity {
         if(currentUser != null){
             Log.i("firebase", "hay usuario");
         } else {
+            Intent intent = new Intent(getApplicationContext(), LoginActivity.class);
+            StartActivity (intent);
             Log.i("firebase", "deberia loguearme porque no hay usuario");
 
         }
 
+    }
+
+    private void StartActivity(Intent intent) {
     }
 
 
