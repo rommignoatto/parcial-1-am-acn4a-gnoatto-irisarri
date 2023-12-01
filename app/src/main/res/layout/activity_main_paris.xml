@@ -1,0 +1,183 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivityParis">
+
+    <LinearLayout
+        android:id="@+id/header_mainParis"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="@color/colorPrimary"
+        android:orientation="horizontal"
+        android:padding="5dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+        >
+
+        <ImageView
+            android:id="@+id/profile_image"
+            android:layout_width="42dp"
+            android:layout_height="40dp"
+            android:layout_gravity="center_vertical"
+            android:src="@mipmap/ic_launcher_round" />
+
+        <TextView
+            android:id="@+id/marca"
+            android:layout_width="250dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_marginStart="16dp"
+            android:gravity="center"
+            android:text="@string/NombreMarca"
+            android:textSize="18sp" />
+
+        <ImageView
+            android:id="@+id/profile_icon"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:layout_gravity="center_vertical"
+            android:layout_marginStart="16dp"
+            android:src="@drawable/baseline_person_24" />
+
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:paddingBottom="20dp"
+        app:layout_constraintStart_toEndOf="@id/header_mainParis"
+        app:layout_constraintBottom_toTopOf="@id/bottomNavigationViewHParis"
+        tools:layout_editor_absoluteX="32dp"
+        tools:layout_editor_absoluteY="54dp">
+
+        <ImageView
+            android:id="@+id/paqueteParis"
+            android:layout_width="match_parent"
+            android:layout_height="216dp"
+            android:layout_gravity="center_horizontal|top"
+            android:scaleType="fitStart"
+            android:src="@drawable/paqueteparis" />
+
+        <TextView
+            android:id="@+id/textViewAParis"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Paris Soñada"
+            android:textColor="@color/primaryDark"
+            android:textSize="24sp"
+            tools:layout_editor_absoluteX="-166dp"
+            tools:layout_editor_absoluteY="466dp" />
+
+        <TextView
+            android:id="@+id/textViewParis3"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:text="@string/tu_compra_incluye"
+            android:textColor="#9C27B0"
+            android:textSize="20sp" />
+
+        <TextView
+            android:id="@+id/textViewParis4"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15dp"
+            android:text="VUELO Operado por Air France" />
+
+        <TextView
+            android:id="@+id/textViewParis5"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="IDA dom 19 mar a las 20.30 de EZE" />
+
+        <TextView
+            android:id="@+id/textViewParis6"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="VUELTA lun 27 mar a las 05.10 de ORY" />
+
+        <TextView
+            android:id="@+id/textViewParis7"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:text="ALOJAMIENTO 14 noches" />
+
+        <TextView
+            android:id="@+id/textViewParis8"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/HotelParis" />
+
+        <TextView
+            android:id="@+id/textViewParis9"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Superior Studio" />
+
+        <TextView
+            android:id="@+id/textViewParis10"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:text="SEGURO DE VIAJE Vigencia: del 19 mar. 2024 al 25 mar. 2024" />
+
+        <TextView
+            android:id="@+id/textViewParis11"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Asistencia Plata Plus" />
+
+        <TextView
+            android:id="@+id/textViewParis12"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:text="CANTIDAD DE PERSONAS: 2" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal">
+
+
+            <TextView
+                android:id="@+id/textViewParis13"
+                android:layout_width="160dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Descargá la guía de viajes:"
+                android:textFontWeight="@integer/material_motion_duration_medium_1"
+                android:textColor="@color/colorAccent"
+                android:textSize="17sp" />
+
+            <ImageView
+                android:id="@+id/imageViewParis6"
+                android:layout_width="50dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:src="@drawable/descargar" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:id="@+id/bottomNavigationViewHParis"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:background="?android:attr/windowBackground"
+        app:itemBackground="@color/colorPrimary"
+        app:itemIconTint="@drawable/nav_item_colour_selected"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:menu="@menu/bottom_nav_menu" />
+</androidx.constraintlayout.widget.ConstraintLayout>

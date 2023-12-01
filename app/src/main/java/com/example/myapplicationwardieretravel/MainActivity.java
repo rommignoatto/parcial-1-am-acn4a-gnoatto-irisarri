@@ -50,6 +50,12 @@ public class MainActivity extends AppCompatActivity {
 
     }
 
+    public void openActivityParis(View view){
+        Intent intent = new Intent(this, MainActivityParis.class);
+        startActivity(intent);
+
+    }
+
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         MenuInflater inflater = getMenuInflater();
