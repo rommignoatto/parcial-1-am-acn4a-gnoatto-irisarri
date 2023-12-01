@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "192219206094",
+    "project_id": "aplicacion-967e9",
+    "storage_bucket": "aplicacion-967e9.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:192219206094:android:0c677a5966489e8f495b9f",
+        "android_client_info": {
+          "package_name": "com.example.myapplicationwardieretravel"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDDbOzUSJHAQWBw9XQKvZFPrbRKK2bn1Js"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
