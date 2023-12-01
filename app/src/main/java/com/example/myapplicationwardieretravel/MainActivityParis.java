@@ -32,7 +32,7 @@ public class MainActivityParis extends AppCompatActivity implements View.OnClick
 
     public void onClick(View view){
 
-        if (view.getId() == R.id.imageView6) {
+        if (view.getId() == R.id.imageViewParis6) {
             descargaPDF();
         }
     }
