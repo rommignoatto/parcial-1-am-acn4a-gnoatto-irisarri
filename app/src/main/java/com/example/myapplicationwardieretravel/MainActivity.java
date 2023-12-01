@@ -7,6 +7,7 @@ import android.net.ConnectivityManager;
 import android.net.NetworkInfo;
 import android.os.AsyncTask;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.Menu;
 import android.view.MenuInflater;
 import android.view.MenuItem;
@@ -40,8 +41,11 @@ public class MainActivity extends AppCompatActivity {
 public void checkConnection(){
     LinearLayout noInternetMessage = findViewById(R.id.noInternet);
     ConnectivityManager connectivityManager = (ConnectivityManager) getSystemService(CONNECTIVITY_SERVICE);
+
     NetworkInfo networkInfo =connectivityManager.getActiveNetworkInfo();
     if(networkInfo != null && networkInfo.isConnected()){
+        GetWeather getWeather = new GetWeather();
+        getWeather.execute("https://goweather.herokuapp.com/weather/paris");
         noInternetMessage.setVisibility(View.INVISIBLE);
     }else{
         noInternetMessage.setVisibility(View.VISIBLE);
@@ -52,7 +56,7 @@ public void checkConnection(){
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-
+        checkConnection();
         buyButtonLondon = findViewById(R.id.buyButton);
         buyButtonBarcelona = findViewById(R.id.buyButtonBarcelona);
         buyButtonParis = findViewById(R.id.buyButtonParis);
@@ -61,7 +65,7 @@ public void checkConnection(){
     }
     public void openActivityHotel(View view){
         Intent intent = new Intent(this, MainActivityHoteles.class);
-        checkConnection();
+
         startActivity(intent);
 
     }
