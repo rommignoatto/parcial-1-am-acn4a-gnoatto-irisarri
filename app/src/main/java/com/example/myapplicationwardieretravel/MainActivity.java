@@ -3,6 +3,8 @@ package com.example.myapplicationwardieretravel;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
+import android.net.ConnectivityManager;
+import android.net.NetworkInfo;
 import android.os.AsyncTask;
 import android.os.Bundle;
 import android.view.Menu;
@@ -11,6 +13,7 @@ import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
 import android.widget.ImageView;
+import android.widget.LinearLayout;
 import android.widget.ScrollView;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -30,8 +33,20 @@ public class MainActivity extends AppCompatActivity {
     Button buyButtonBarcelona;
     Button buyButtonParis;
 
+    public void checkConnectionOnClick(View view){
+        checkConnection();
+    }
 
-
+public void checkConnection(){
+    LinearLayout noInternetMessage = findViewById(R.id.noInternet);
+    ConnectivityManager connectivityManager = (ConnectivityManager) getSystemService(CONNECTIVITY_SERVICE);
+    NetworkInfo networkInfo =connectivityManager.getActiveNetworkInfo();
+    if(networkInfo != null && networkInfo.isConnected()){
+        noInternetMessage.setVisibility(View.INVISIBLE);
+    }else{
+        noInternetMessage.setVisibility(View.VISIBLE);
+    }
+}
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -46,6 +61,7 @@ public class MainActivity extends AppCompatActivity {
     }
     public void openActivityHotel(View view){
         Intent intent = new Intent(this, MainActivityHoteles.class);
+        checkConnection();
         startActivity(intent);
 
     }
