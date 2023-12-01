@@ -4,6 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/white"
     tools:context=".MainActivity">
 
     <LinearLayout
@@ -64,165 +65,165 @@
             tools:layout_editor_absoluteX="0dp"
             tools:layout_editor_absoluteY="0dp">
 
-        <LinearLayout
-            android:id="@+id/componentPackages3"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:gravity="center_horizontal"
-            android:orientation="vertical"
-            tools:layout_editor_absoluteX="0dp"
-            tools:layout_editor_absoluteY="0dp"
-            android:paddingBottom="10dp">
+            <LinearLayout
+                android:id="@+id/componentPackages3"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center_horizontal"
+                android:orientation="vertical"
+                android:paddingBottom="10dp"
+                tools:layout_editor_absoluteX="0dp"
+                tools:layout_editor_absoluteY="0dp">
 
-            <com.google.android.material.card.MaterialCardView
-                android:layout_width="350dp"
-                android:layout_height="wrap_content"
-                app:cardBackgroundColor="@color/cardBg">
-
-                <LinearLayout
-                    android:layout_width="match_parent"
+                <com.google.android.material.card.MaterialCardView
+                    android:layout_width="350dp"
                     android:layout_height="wrap_content"
-                    android:orientation="vertical">
-
-                    <ImageView
-                        android:id="@+id/imageViewBarcelona"
-                        android:layout_width="match_parent"
-                        android:layout_height="224dp"
-                        android:scaleType="centerCrop"
-                        android:src="@drawable/barcelona" />
-
-                    <TextView
-                        android:id="@+id/daysBarcelona"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_marginLeft="20dp"
-                        android:background="@drawable/style_border_days"
-                        android:text="@string/DiasBarcelona"
-                        android:textColor="@color/white"
-                        android:textStyle="bold">
-
-                    </TextView>
-
+                    app:cardBackgroundColor="@color/cardBg">
 
                     <LinearLayout
-                        android:layout_width="wrap_content"
+                        android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:layout_margin="8dp"
                         android:orientation="vertical">
 
+                        <ImageView
+                            android:id="@+id/imageViewBarcelona"
+                            android:layout_width="match_parent"
+                            android:layout_height="224dp"
+                            android:scaleType="centerCrop"
+                            android:src="@drawable/barcelona" />
+
                         <TextView
-                            android:id="@+id/titleBarcelona"
+                            android:id="@+id/daysBarcelona"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:layout_marginLeft="15dp"
-                            android:background="@color/cardBg"
-                            android:text="@string/BarcelonaGaudi"
-                            android:textColor="@color/primaryDark"
+                            android:layout_marginLeft="20dp"
+                            android:background="@drawable/style_border_days"
+                            android:text="@string/DiasBarcelona"
+                            android:textColor="@color/white"
                             android:textStyle="bold">
 
                         </TextView>
 
-                        <LinearLayout
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_marginTop="8dp"
-
-                            android:orientation="horizontal">
-
-                            <TextView
-                                android:id="@+id/flightLondres"
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:layout_marginLeft="15dp"
-                                android:layout_marginTop="8dp"
-                                android:drawableLeft="@drawable/flight_icon"
-                                android:text="@string/BuenosAiresBarcelona"
-                                android:textColor="@color/primaryDark" />
-
-                            <TextView
-                                android:id="@+id/calendarBarcelona"
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:layout_marginLeft="15dp"
-                                android:layout_marginTop="8dp"
-                                android:drawableLeft="@drawable/outline_calendar_month_24"
-                                android:text="@string/FechaBarcelona"
-                                android:textColor="@color/primaryDark" />
-                        </LinearLayout>
-
-                        <TextView
-                            android:id="@+id/hotelBarcelona"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_marginLeft="15dp"
-                            android:layout_marginTop="8dp"
-                            android:drawableLeft="@drawable/hotel_icon"
-                            android:text="@string/HotelBarcelona"
-                            android:textColor="@color/primaryDark" />
-
-                    </LinearLayout>
-
-                    <LinearLayout
-                        android:layout_width="match_parent"
-                        android:layout_height="match_parent"
-                        android:orientation="horizontal">
-
-                        <Button
-                            android:id="@+id/buyButtonBarcelona"
-                            android:layout_width="wrap_content"
-                            android:layout_height="match_parent"
-                            android:layout_marginLeft="50dp"
-                            android:backgroundTint="@color/colorPrimary"
-                            android:onClick="buyBarcelona"
-                            android:padding="2dp"
-                            android:text="@string/Comprar"
-                            android:textSize="13dp"
-                            app:cornerRadius="20dp" />
 
                         <LinearLayout
-                            android:layout_width="150dp"
+                            android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:layout_marginLeft="50dp"
-                            android:layout_marginBottom="5dp"
-                            android:background="@drawable/style_border_price"
-                            android:gravity="center"
+                            android:layout_margin="8dp"
                             android:orientation="vertical">
 
                             <TextView
-                                android:id="@+id/finalPriceBarcelona"
+                                android:id="@+id/titleBarcelona"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
-                                android:text="@string/precio_final_por_persona"
+                                android:layout_marginLeft="15dp"
+                                android:background="@color/cardBg"
+                                android:text="@string/BarcelonaGaudi"
                                 android:textColor="@color/primaryDark"
+                                android:textStyle="bold">
 
-                                android:textSize="12dp" />
+                            </TextView>
+
+                            <LinearLayout
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="8dp"
+
+                                android:orientation="horizontal">
+
+                                <TextView
+                                    android:id="@+id/flightLondres"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginLeft="15dp"
+                                    android:layout_marginTop="8dp"
+                                    android:drawableLeft="@drawable/flight_icon"
+                                    android:text="@string/BuenosAiresBarcelona"
+                                    android:textColor="@color/primaryDark" />
+
+                                <TextView
+                                    android:id="@+id/calendarBarcelona"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginLeft="15dp"
+                                    android:layout_marginTop="8dp"
+                                    android:drawableLeft="@drawable/outline_calendar_month_24"
+                                    android:text="@string/FechaBarcelona"
+                                    android:textColor="@color/primaryDark" />
+                            </LinearLayout>
 
                             <TextView
-                                android:id="@+id/priceBarcelona"
+                                android:id="@+id/hotelBarcelona"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
-                                android:paddingStart="8dp"
-                                android:text="$1.296.000"
-                                android:textColor="@color/primaryDark"
-                                android:textSize="18dp"
+                                android:layout_marginLeft="15dp"
+                                android:layout_marginTop="8dp"
+                                android:drawableLeft="@drawable/hotel_icon"
+                                android:text="@string/HotelBarcelona"
+                                android:textColor="@color/primaryDark" />
 
-                                android:textStyle="bold" />
+                        </LinearLayout>
 
-                            <TextView
-                                android:id="@+id/taxBarcelona"
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:orientation="horizontal">
+
+                            <Button
+                                android:id="@+id/buyButtonBarcelona"
                                 android:layout_width="wrap_content"
+                                android:layout_height="match_parent"
+                                android:layout_marginLeft="50dp"
+                                android:backgroundTint="@color/colorPrimary"
+                                android:onClick="buyBarcelona"
+                                android:padding="2dp"
+                                android:text="@string/Comprar"
+                                android:textSize="13dp"
+                                app:cornerRadius="20dp" />
+
+                            <LinearLayout
+                                android:layout_width="150dp"
                                 android:layout_height="wrap_content"
-                                android:text="@string/impuestos_incluidos"
-                                android:textColor="@color/primaryDark"
-                                android:textSize="12dp" />
+                                android:layout_marginLeft="50dp"
+                                android:layout_marginBottom="5dp"
+                                android:background="@drawable/style_border_price"
+                                android:gravity="center"
+                                android:orientation="vertical">
+
+                                <TextView
+                                    android:id="@+id/finalPriceBarcelona"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="@string/precio_final_por_persona"
+                                    android:textColor="@color/primaryDark"
+
+                                    android:textSize="12dp" />
+
+                                <TextView
+                                    android:id="@+id/priceBarcelona"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:paddingStart="8dp"
+                                    android:text="$1.296.000"
+                                    android:textColor="@color/primaryDark"
+                                    android:textSize="18dp"
+
+                                    android:textStyle="bold" />
+
+                                <TextView
+                                    android:id="@+id/taxBarcelona"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="@string/impuestos_incluidos"
+                                    android:textColor="@color/primaryDark"
+                                    android:textSize="12dp" />
+                            </LinearLayout>
                         </LinearLayout>
                     </LinearLayout>
-                </LinearLayout>
 
-            </com.google.android.material.card.MaterialCardView>
+                </com.google.android.material.card.MaterialCardView>
 
 
-        </LinearLayout>
+            </LinearLayout>
 
             <LinearLayout
                 android:id="@+id/componentPackages"
@@ -383,165 +384,199 @@
 
             </LinearLayout>
 
-        <LinearLayout
-            android:id="@+id/componentPackages4"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:gravity="center_horizontal"
-            android:orientation="vertical"
-            tools:layout_editor_absoluteX="0dp"
-            tools:layout_editor_absoluteY="0dp">
-
-            <com.google.android.material.card.MaterialCardView
-                android:layout_width="350dp"
-                android:layout_height="wrap_content"
-                app:cardBackgroundColor="@color/cardBg">
-
             <LinearLayout
+                android:id="@+id/componentPackages4"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:orientation="vertical">
+                android:layout_height="match_parent"
+                android:gravity="center_horizontal"
+                android:orientation="vertical"
+                tools:layout_editor_absoluteX="0dp"
+                tools:layout_editor_absoluteY="0dp">
 
-                <ImageView
-                    android:id="@+id/imageViewParis"
-                    android:layout_width="match_parent"
-                    android:layout_height="224dp"
-                    android:scaleType="centerCrop"
-                    android:src="@drawable/paris" />
-
-                <TextView
-                    android:id="@+id/daysParis"
-                    android:layout_width="wrap_content"
+                <com.google.android.material.card.MaterialCardView
+                    android:layout_width="350dp"
                     android:layout_height="wrap_content"
-                    android:layout_marginLeft="20dp"
-                    android:background="@drawable/style_border_days"
-                    android:text="@string/DiasParis"
-                    android:textColor="@color/white"
-                    android:textStyle="bold">
-
-                </TextView>
-
-
-                <LinearLayout
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_margin="8dp"
-                    android:orientation="vertical">
-
-                    <TextView
-                        android:id="@+id/titleParis"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_marginLeft="15dp"
-                        android:background="@color/cardBg"
-                        android:text="@string/ParisSonada"
-                        android:textColor="@color/primaryDark"
-                        android:textStyle="bold">
-
-                    </TextView>
+                    app:cardBackgroundColor="@color/cardBg">
 
                     <LinearLayout
-                        android:layout_width="wrap_content"
+                        android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:layout_marginTop="8dp"
-
-                        android:orientation="horizontal">
-
-                        <TextView
-                            android:id="@+id/flightParis"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_marginLeft="15dp"
-                            android:layout_marginTop="8dp"
-                            android:drawableLeft="@drawable/flight_icon"
-                            android:text="@string/BuenosAiresParis"
-                            android:textColor="@color/primaryDark" />
-
-                        <TextView
-                            android:id="@+id/calendarParis"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_marginLeft="15dp"
-                            android:layout_marginTop="8dp"
-                            android:drawableLeft="@drawable/outline_calendar_month_24"
-                            android:text="@string/FechaParis"
-                            android:textColor="@color/primaryDark" />
-                    </LinearLayout>
-
-                    <TextView
-                        android:id="@+id/hotelParis"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_marginLeft="15dp"
-                        android:layout_marginTop="8dp"
-                        android:drawableLeft="@drawable/hotel_icon"
-                        android:text="@string/HotelParis"
-                        android:textColor="@color/primaryDark" />
-
-                </LinearLayout>
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:orientation="horizontal">
-
-                    <Button
-                        android:id="@+id/buyButtonParis"
-                        android:layout_width="wrap_content"
-                        android:layout_height="match_parent"
-                        android:layout_marginLeft="50dp"
-                        android:backgroundTint="@color/colorPrimary"
-                        android:onClick="openActivityParis"
-                        android:padding="2dp"
-                        android:text="@string/Comprar"
-                        android:textSize="13dp"
-                        app:cornerRadius="20dp" />
-
-                    <LinearLayout
-                        android:layout_width="150dp"
-                        android:layout_height="wrap_content"
-                        android:layout_marginLeft="50dp"
-                        android:layout_marginBottom="5dp"
-                        android:background="@drawable/style_border_price"
-                        android:gravity="center"
                         android:orientation="vertical">
 
-                        <TextView
-                            android:id="@+id/finalPriceParis"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:text="@string/precio_final_por_persona"
-                            android:textColor="@color/primaryDark"
-
-                            android:textSize="12dp" />
+                        <ImageView
+                            android:id="@+id/imageViewParis"
+                            android:layout_width="match_parent"
+                            android:layout_height="224dp"
+                            android:scaleType="centerCrop"
+                            android:src="@drawable/paris" />
 
                         <TextView
-                            android:id="@+id/priceParis"
+                            android:id="@+id/daysParis"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:paddingStart="8dp"
-                            android:text="$1.070.700"
-                            android:textColor="@color/primaryDark"
-                            android:textSize="18dp"
+                            android:layout_marginLeft="20dp"
+                            android:background="@drawable/style_border_days"
+                            android:text="@string/DiasParis"
+                            android:textColor="@color/white"
+                            android:textStyle="bold">
 
-                            android:textStyle="bold" />
+                        </TextView>
 
-                        <TextView
-                            android:id="@+id/taxParis"
+
+                        <LinearLayout
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:text="@string/impuestos_incluidos"
-                            android:textColor="@color/primaryDark"
-                            android:textSize="12dp" />
+                            android:layout_margin="8dp"
+                            android:orientation="vertical">
+
+                            <TextView
+                                android:id="@+id/titleParis"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="15dp"
+                                android:background="@color/cardBg"
+                                android:text="@string/ParisSonada"
+                                android:textColor="@color/primaryDark"
+                                android:textStyle="bold">
+
+                            </TextView>
+
+                            <LinearLayout
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="8dp"
+
+                                android:orientation="horizontal">
+
+                                <TextView
+                                    android:id="@+id/flightParis"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginLeft="15dp"
+                                    android:layout_marginTop="8dp"
+                                    android:drawableLeft="@drawable/flight_icon"
+                                    android:text="@string/BuenosAiresParis"
+                                    android:textColor="@color/primaryDark" />
+
+                                <TextView
+                                    android:id="@+id/calendarParis"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginLeft="15dp"
+                                    android:layout_marginTop="8dp"
+                                    android:drawableLeft="@drawable/outline_calendar_month_24"
+                                    android:text="@string/FechaParis"
+                                    android:textColor="@color/primaryDark" />
+                            </LinearLayout>
+
+                            <TextView
+                                android:id="@+id/hotelParis"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="15dp"
+                                android:layout_marginTop="8dp"
+                                android:drawableLeft="@drawable/hotel_icon"
+                                android:text="@string/HotelParis"
+                                android:textColor="@color/primaryDark" />
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:orientation="horizontal">
+
+                            <Button
+                                android:id="@+id/buyButtonParis"
+                                android:layout_width="wrap_content"
+                                android:layout_height="match_parent"
+                                android:layout_marginLeft="50dp"
+                                android:backgroundTint="@color/colorPrimary"
+                                android:onClick="openActivityParis"
+                                android:padding="2dp"
+                                android:text="@string/Comprar"
+                                android:textSize="13dp"
+                                app:cornerRadius="20dp" />
+
+                            <LinearLayout
+                                android:layout_width="150dp"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="50dp"
+                                android:layout_marginBottom="5dp"
+                                android:background="@drawable/style_border_price"
+                                android:gravity="center"
+                                android:orientation="vertical">
+
+                                <TextView
+                                    android:id="@+id/finalPriceParis"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="@string/precio_final_por_persona"
+                                    android:textColor="@color/primaryDark"
+
+                                    android:textSize="12dp" />
+
+                                <TextView
+                                    android:id="@+id/priceParis"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:paddingStart="8dp"
+                                    android:text="$1.070.700"
+                                    android:textColor="@color/primaryDark"
+                                    android:textSize="18dp"
+
+                                    android:textStyle="bold" />
+
+                                <TextView
+                                    android:id="@+id/taxParis"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="@string/impuestos_incluidos"
+                                    android:textColor="@color/primaryDark"
+                                    android:textSize="12dp" />
+                            </LinearLayout>
+
+                        </LinearLayout>
                     </LinearLayout>
 
-                </LinearLayout>
-            </LinearLayout>
-
-            </com.google.android.material.card.MaterialCardView>
+                </com.google.android.material.card.MaterialCardView>
             </LinearLayout>
         </LinearLayout>
 
     </ScrollView>
+
+    <LinearLayout
+        android:id="@+id/noInternet"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:backgroundTint="@color/white"
+        android:gravity="center"
+        android:visibility="invisible"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/textViewNoConnect"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+
+            android:background="@color/primaryDark"
+
+            android:fontFamily="sans-serif-black"
+            android:text="No tenes conexión a internet"
+            android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+            android:textColor="@color/white"
+            android:textSize="30sp" />
+
+        <Button
+            android:id="@+id/button"
+            android:layout_width="150dp"
+            android:layout_height="50dp"
+            android:backgroundTint="@color/primaryDark"
+            android:onClick="checkConnectionOnClick"
+            android:text="Reintentar" />
+
+
+    </LinearLayout>
 
     <FrameLayout
         android:id="@+id/frameLayout"
@@ -554,6 +589,7 @@
 
     </FrameLayout>
 
+
     <com.google.android.material.bottomnavigation.BottomNavigationView
         android:id="@+id/bottomNavigationView"
         android:layout_width="match_parent"
@@ -564,4 +600,5 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:menu="@menu/bottom_nav_menu" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>
