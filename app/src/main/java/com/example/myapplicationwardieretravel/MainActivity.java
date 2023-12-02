@@ -63,7 +63,18 @@ public void checkConnection(){
         buyButtonLondon = findViewById(R.id.buyButton);
         buyButtonBarcelona = findViewById(R.id.buyButtonBarcelona);
         buyButtonParis = findViewById(R.id.buyButtonParis);
+        ImageView profileIcon = findViewById(R.id.profile_icon);
 
+        profileIcon.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                // Crear un Intent para abrir LoginActivity
+                Intent intent = new Intent(MainActivity.this, LoginActivity.class);
+
+                // Iniciar la actividad LoginActivity
+                startActivity(intent);
+            }
+        });
 
 
     }
