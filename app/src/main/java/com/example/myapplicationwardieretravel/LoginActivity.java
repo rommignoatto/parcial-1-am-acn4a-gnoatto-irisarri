@@ -24,6 +24,8 @@ public class LoginActivity<EmailPasswordActivity> extends AppCompatActivity {
         Log.i( "firebase",  "email:" + email);
         Log.i("firebase",  "password:" + password);
 
+
+
         mAuth.signInWithEmailAndPassword(email, password)
                 .addOnCompleteListener(new OnCompleteListener<AuthResult>() {
                     @Override
@@ -48,7 +50,7 @@ public class LoginActivity<EmailPasswordActivity> extends AppCompatActivity {
 
         String email = emailInput.getText().toString();
         String password = passInput.getText().toString();
-        this.login("hola@romina.io", "prueba123");
+        this.login(email, password);
 
     }
     @Override
@@ -57,4 +59,6 @@ public class LoginActivity<EmailPasswordActivity> extends AppCompatActivity {
         setContentView(R.layout.activity_login);
         mAuth = FirebaseAuth.getInstance();
     }
+
+
 }
