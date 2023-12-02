@@ -95,6 +95,12 @@ public void checkConnection(){
         }
 
     }
+    public void logout (View v){
+        mAuth.signOut();
+        Intent intent = new Intent(getApplicationContext(), LoginActivity.class);
+        StartActivity (intent);
+        Log.i("firebase","yendo al login");
+    }
 
     private void StartActivity(Intent intent) {
     }
