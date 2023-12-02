@@ -44,8 +44,8 @@ public void checkConnection(){
 
     NetworkInfo networkInfo =connectivityManager.getActiveNetworkInfo();
     if(networkInfo != null && networkInfo.isConnected()){
-        GetWeather getWeather = new GetWeather();
-        getWeather.execute("https://goweather.herokuapp.com/weather/paris");
+        GetWeather getWeather = new GetWeather(this);
+        getWeather.execute("https://apliclima--rominagnoatto.repl.co/");
         noInternetMessage.setVisibility(View.INVISIBLE);
     }else{
         noInternetMessage.setVisibility(View.VISIBLE);
