@@ -1,5 +1,8 @@
 package com.example.myapplicationwardieretravel;
 
+import static androidx.constraintlayout.helper.widget.MotionEffect.TAG;
+
+import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
@@ -18,8 +21,15 @@ import android.widget.LinearLayout;
 import android.widget.ScrollView;
 import android.widget.TextView;
 import android.widget.Toast;
+
+import com.google.android.gms.tasks.OnCompleteListener;
+import com.google.android.gms.tasks.Task;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
+import com.google.firebase.firestore.DocumentSnapshot;
+import com.google.firebase.firestore.FirebaseFirestore;
+import com.google.firebase.firestore.QueryDocumentSnapshot;
+import com.google.firebase.firestore.QuerySnapshot;
 
 import java.io.FileOutputStream;
 import java.io.IOException;
@@ -32,6 +42,7 @@ import java.net.URLConnection;
 
 public class MainActivity extends AppCompatActivity {
     private FirebaseAuth mAuth;
+    private FirebaseFirestore db;
     Button buyButtonLondon;
     Button buyButtonBarcelona;
     Button buyButtonParis;
@@ -59,7 +70,10 @@ public void checkConnection(){
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         checkConnection();
+
         mAuth = FirebaseAuth.getInstance();
+        db = FirebaseFirestore.getInstance();
+
         buyButtonLondon = findViewById(R.id.buyButton);
         buyButtonBarcelona = findViewById(R.id.buyButtonBarcelona);
         buyButtonParis = findViewById(R.id.buyButtonParis);
@@ -86,7 +100,37 @@ public void checkConnection(){
         // Check if user is signed in (non-null) and update UI accordingly.
         FirebaseUser currentUser = mAuth.getCurrentUser();
         if(currentUser != null){
-            Log.i("firebase", "hay usuario");
+            String uid = currentUser.getUid();
+            db.collection("users")
+                    .whereEqualTo("uid", uid)
+                    .get()
+                    .addOnCompleteListener(new OnCompleteListener<QuerySnapshot>() {
+                        @Override
+                        public void onComplete(@NonNull Task<QuerySnapshot> task) {
+                            if (task.isSuccessful()) {
+                                for (QueryDocumentSnapshot document : task.getResult()) {
+                                    String id = document.getId();
+                                    Object data = document.getData();
+
+                                    db
+                                            .collection("users")
+                                            .document(id)
+                                            .update("verificado", "true");
+                                    Log.d(TAG, id + " => " + data);
+
+                                }
+                            } else {
+                                Log.w(TAG, "Error getting documents.", task.getException());
+                            }
+                        }
+                    });
+
+            if(currentUser.isEmailVerified()){
+                Log.i("firebase", "hay usuario");
+            }else{
+                currentUser.sendEmailVerification();
+            }
+
         } else {
             Intent intent = new Intent(getApplicationContext(), LoginActivity.class);
             StartActivity (intent);
