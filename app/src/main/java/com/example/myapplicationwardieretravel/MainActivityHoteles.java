@@ -1,5 +1,6 @@
 package com.example.myapplicationwardieretravel;
 
+import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.app.ProgressDialog;
@@ -10,6 +11,13 @@ import android.view.View;
 import android.widget.ImageView;
 import android.widget.Toast;
 
+import com.google.android.gms.maps.CameraUpdateFactory;
+import com.google.android.gms.maps.GoogleMap;
+import com.google.android.gms.maps.OnMapReadyCallback;
+import com.google.android.gms.maps.SupportMapFragment;
+import com.google.android.gms.maps.model.LatLng;
+import com.google.android.gms.maps.model.MarkerOptions;
+
 import java.io.FileOutputStream;
 import java.io.IOException;
 import java.io.InputStream;
@@ -18,14 +26,19 @@ import java.net.HttpURLConnection;
 import java.net.MalformedURLException;
 import java.net.URL;
 
-public class MainActivityHoteles extends AppCompatActivity implements View.OnClickListener{
+public class MainActivityHoteles extends AppCompatActivity implements View.OnClickListener, OnMapReadyCallback, GoogleMap.OnMapClickListener, GoogleMap.OnMapLongClickListener {
 
+    GoogleMap mMap;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main_hoteles);
         ImageView imageView = (ImageView) findViewById(R.id.imageView6);
         imageView.setOnClickListener(this);
+
+        SupportMapFragment mapFragment = (SupportMapFragment) getSupportFragmentManager().findFragmentById(R.id.map);
+
+        mapFragment.getMapAsync(this);
 
     }
 
@@ -44,6 +57,26 @@ public class MainActivityHoteles extends AppCompatActivity implements View.OnCli
         progressDialog.setMessage("Descargando Guía...");
         
         new DescargarPDFAsyncTask(progressDialog).execute(urlADescargar);
+    }
+
+    @Override
+    public void onMapReady(@NonNull GoogleMap googleMap) {
+        mMap = googleMap;
+
+        LatLng hotelLondres = new LatLng(51.4923356,-0.1433639);
+        mMap.addMarker(new MarkerOptions().position(hotelLondres).title("Hotel Chester"));
+        mMap.moveCamera(CameraUpdateFactory.newLatLng(hotelLondres));
+    }
+
+
+    @Override
+    public void onMapClick(@NonNull LatLng latLng) {
+
+    }
+
+    @Override
+    public void onMapLongClick(@NonNull LatLng latLng) {
+
     }
 
     class DescargarPDFAsyncTask extends AsyncTask<String, Void, String> {
