@@ -23,7 +23,8 @@ public class LoginActivity<EmailPasswordActivity> extends AppCompatActivity {
         String tag;
         Log.i( "firebase",  "email:" + email);
         Log.i("firebase",  "password:" + password);
-
+        Intent intent = new Intent(getApplicationContext(), MainActivity.class);
+        startActivity(intent);
 
 
         mAuth.signInWithEmailAndPassword(email, password)
@@ -45,8 +46,8 @@ public class LoginActivity<EmailPasswordActivity> extends AppCompatActivity {
     }
 
     public void onLogButtonClick (View view){
-        EditText emailInput = findViewById(R.id.email);
-        EditText passInput = findViewById(R.id.password);
+        EditText emailInput = findViewById(R.id.Email);
+        EditText passInput = findViewById(R.id.Password);
 
         String email = emailInput.getText().toString();
         String password = passInput.getText().toString();
