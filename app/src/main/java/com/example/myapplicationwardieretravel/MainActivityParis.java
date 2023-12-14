@@ -1,5 +1,6 @@
 package com.example.myapplicationwardieretravel;
 
+import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.app.ProgressDialog;
@@ -10,6 +11,13 @@ import android.view.View;
 import android.widget.ImageView;
 import android.widget.Toast;
 
+import com.google.android.gms.maps.CameraUpdateFactory;
+import com.google.android.gms.maps.GoogleMap;
+import com.google.android.gms.maps.OnMapReadyCallback;
+import com.google.android.gms.maps.SupportMapFragment;
+import com.google.android.gms.maps.model.LatLng;
+import com.google.android.gms.maps.model.MarkerOptions;
+
 import java.io.FileOutputStream;
 import java.io.IOException;
 import java.io.InputStream;
@@ -18,14 +26,18 @@ import java.net.HttpURLConnection;
 import java.net.MalformedURLException;
 import java.net.URL;
 
-public class MainActivityParis extends AppCompatActivity implements View.OnClickListener{
-
+public class MainActivityParis extends AppCompatActivity implements View.OnClickListener, OnMapReadyCallback {
+    GoogleMap mMapP;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main_paris);
         ImageView imageView = (ImageView) findViewById(R.id.imageViewParis6);
         imageView.setOnClickListener(this);
+
+        SupportMapFragment mapFragmentParis = (SupportMapFragment) getSupportFragmentManager().findFragmentById(R.id.mapParis);
+
+        mapFragmentParis.getMapAsync(this);
     }
 
 
@@ -45,6 +57,15 @@ public class MainActivityParis extends AppCompatActivity implements View.OnClick
         progressDialog.setMessage("Descargando Guía...");
 
         new MainActivityParis.DescargarPDFAsyncTask(progressDialog).execute(urlADescargar);
+    }
+
+    @Override
+    public void onMapReady(@NonNull GoogleMap googleMap) {
+        mMapP = googleMap;
+
+        LatLng hotelParis = new LatLng(48.8748808,2.3211763);
+        mMapP.addMarker(new MarkerOptions().position(hotelParis).title("Hotel Charing Cross"));
+        mMapP.moveCamera(CameraUpdateFactory.newLatLngZoom(hotelParis, 15));
     }
 
     class DescargarPDFAsyncTask extends AsyncTask<String, Void, String> {

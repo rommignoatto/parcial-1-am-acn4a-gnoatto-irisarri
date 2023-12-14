@@ -26,7 +26,7 @@ import java.net.HttpURLConnection;
 import java.net.MalformedURLException;
 import java.net.URL;
 
-public class MainActivityHoteles extends AppCompatActivity implements View.OnClickListener, OnMapReadyCallback, GoogleMap.OnMapClickListener, GoogleMap.OnMapLongClickListener {
+public class MainActivityHoteles extends AppCompatActivity implements View.OnClickListener, OnMapReadyCallback {
 
     GoogleMap mMap;
     @Override
@@ -64,20 +64,12 @@ public class MainActivityHoteles extends AppCompatActivity implements View.OnCli
         mMap = googleMap;
 
         LatLng hotelLondres = new LatLng(51.4923356,-0.1433639);
-        mMap.addMarker(new MarkerOptions().position(hotelLondres).title("Hotel Chester"));
+        mMap.addMarker(new MarkerOptions().position(hotelLondres).title("Chester Hotel Victoria"));
         mMap.moveCamera(CameraUpdateFactory.newLatLng(hotelLondres));
     }
 
 
-    @Override
-    public void onMapClick(@NonNull LatLng latLng) {
 
-    }
-
-    @Override
-    public void onMapLongClick(@NonNull LatLng latLng) {
-
-    }
 
     class DescargarPDFAsyncTask extends AsyncTask<String, Void, String> {
         ProgressDialog progressDialog;
