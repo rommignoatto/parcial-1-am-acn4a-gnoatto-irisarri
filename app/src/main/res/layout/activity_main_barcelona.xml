@@ -1,0 +1,193 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:map="http://schemas.android.com/apk/res-auto"
+    tools:context=".MainActivityBarcelona">
+
+    <LinearLayout
+        android:id="@+id/header_mainBarcelona"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="@color/colorPrimary"
+        android:orientation="horizontal"
+        android:padding="5dp"
+
+        tools:layout_editor_absoluteX="-166dp"
+        tools:layout_editor_absoluteY="466dp">
+        >
+
+        <ImageView
+            android:id="@+id/profile_image"
+            android:layout_width="42dp"
+            android:layout_height="40dp"
+            android:layout_gravity="center_vertical"
+            android:src="@mipmap/ic_launcher_round" />
+
+        <TextView
+            android:id="@+id/marca"
+            android:layout_width="250dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_marginStart="16dp"
+            android:gravity="center"
+            android:text="@string/NombreMarca"
+            android:textSize="18sp" />
+
+        <ImageView
+            android:id="@+id/profile_icon"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:layout_gravity="center_vertical"
+            android:layout_marginStart="16dp"
+            android:src="@drawable/baseline_person_24" />
+
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:paddingBottom="20dp"
+        app:layout_constraintStart_toEndOf="@id/header_mainBarcelona"
+        app:layout_constraintBottom_toTopOf="@id/bottomNavigationViewHBarcelona"
+        tools:layout_editor_absoluteX="32dp"
+        tools:layout_editor_absoluteY="54dp">
+
+        <ImageView
+            android:id="@+id/paqueteBarcelona"
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+            android:layout_gravity="center_horizontal|top"
+            android:scaleType="fitStart"
+            android:src="@drawable/barcelonaidn" />
+
+        <TextView
+            android:id="@+id/textViewABarcelona"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/BarcelonaGaudi"
+            android:textColor="@color/primaryDark"
+            android:textSize="24sp"
+            tools:layout_editor_absoluteX="-166dp"
+            tools:layout_editor_absoluteY="466dp" />
+
+        <TextView
+            android:id="@+id/textViewBarcelona3"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:text="@string/tu_compra_incluye"
+            android:textColor="#9C27B0"
+            android:textSize="20sp" />
+
+        <TextView
+            android:id="@+id/textViewBarcelona4"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15dp"
+            android:text="VUELO Operado por Iberia" />
+
+        <TextView
+            android:id="@+id/textViewBarcelona5"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="IDA sab 10 feb a las 15.30 de EZE" />
+
+        <TextView
+            android:id="@+id/textViewBarcelona6"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="VUELTA jue 21 feb a las 15.10 de BCN" />
+
+        <TextView
+            android:id="@+id/textViewBarcelona7"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:text="ALOJAMIENTO 7 noches" />
+
+        <TextView
+            android:id="@+id/textViewBarcelona8"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/HotelBarcelona" />
+
+        <TextView
+            android:id="@+id/textViewBarcelona9"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Superior Studio" />
+
+        <fragment
+            android:id="@+id/mapBarcelona"
+            android:name="com.google.android.gms.maps.SupportMapFragment"
+            android:layout_width="match_parent"
+            android:layout_height="76dp"
+
+            map:uiRotateGestures="true"
+            map:uiZoomControls="true"></fragment>
+
+        <TextView
+            android:id="@+id/textViewBarcelona10"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:text="SEGURO DE VIAJE Vigencia: del 10 feb. 2024 al 21 feb. 2024" />
+
+        <TextView
+            android:id="@+id/textViewBarcelona11"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Asistencia Plata Plus" />
+
+        <TextView
+            android:id="@+id/textViewBarcelona12"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:text="CANTIDAD DE PERSONAS: 2" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal">
+
+
+            <TextView
+                android:id="@+id/textViewBarcelona13"
+                android:layout_width="160dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Descargá la guía de viajes:"
+                android:textFontWeight="@integer/material_motion_duration_medium_1"
+                android:textColor="@color/colorAccent"
+                android:textSize="17sp" />
+
+            <ImageView
+                android:id="@+id/imageViewBarcelona6"
+                android:layout_width="50dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:src="@drawable/descargar" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:id="@+id/bottomNavigationViewHBarcelona"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:background="?android:attr/windowBackground"
+        app:itemBackground="@color/colorPrimary"
+        app:itemIconTint="@drawable/nav_item_colour_selected"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:menu="@menu/bottom_nav_menu" />
+</androidx.constraintlayout.widget.ConstraintLayout>
