@@ -15,11 +15,13 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.MyApplicationWardiereTravel"
         tools:targetApi="31">
+        <activity
+            android:name=".MainActivityBarcelona"
+            android:exported="false" />
 
-        <meta-data android:name="com.google.android.geo.API_KEY"
-            android:value="AIzaSyArVnEpmAK7ALH2MPIyCjv7I2Y6v1OseF8">
-
-        </meta-data>
+        <meta-data
+            android:name="com.google.android.geo.API_KEY"
+            android:value="AIzaSyArVnEpmAK7ALH2MPIyCjv7I2Y6v1OseF8"></meta-data>
 
         <activity
             android:name=".Login"
