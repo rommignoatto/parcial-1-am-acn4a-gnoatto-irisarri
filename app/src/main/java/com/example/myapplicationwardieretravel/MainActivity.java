@@ -122,7 +122,7 @@ public void checkConnection(){
                             if(task.isSuccessful()){
                                 for( QueryDocumentSnapshot documento: task.getResult()) {
                                     String id = documento.getId();
-                                    object data = (object) documento.getData();
+                                    Object data = (Object)  documento.getData();
                                     Log.i("firebase firestore", "id: " + id + " data:"+ data.toString());
                                 }
 
