@@ -30,6 +30,7 @@ import com.google.firebase.firestore.QuerySnapshot;
 
 public class MainActivity extends AppCompatActivity {
     private FirebaseAuth mAuth;
+
     private FirebaseFirestore db;
     Button buyButtonLondon;
     Button buyButtonBarcelona;
@@ -88,8 +89,7 @@ public void checkConnection(){
         // Check if user is signed in (non-null) and update UI accordingly.
         FirebaseUser currentUser = mAuth.getCurrentUser();
         if(currentUser != null){
-            String uid = currentUser.getUid();
-            db.collection("users")
+/*            db.collection("users")
                     .whereEqualTo("uid", uid)
                     .get()
                     .addOnCompleteListener(new OnCompleteListener<QuerySnapshot>() {
@@ -109,6 +109,24 @@ public void checkConnection(){
                                 }
                             } else {
                                 Log.w(TAG, "Error getting documents.", task.getException());
+                            }
+                        }
+                    });*/
+            String uid = currentUser.getUid();
+            db
+                    .collection("users")
+                    .get()
+                    .addOnCompleteListener(new OnCompleteListener<QuerySnapshot>() {
+                        @Override
+                        public void onComplete(@NonNull Task<QuerySnapshot> task) {
+                            if(task.isSuccessful()){
+                                for( QueryDocumentSnapshot documento: task.getResult()) {
+                                    String id = documento.getId();
+                                    Object data = (Object)  documento.getData();
+                                    Log.i("firebase firestore", "id: " + id + " data:"+ data.toString());
+                                }
+
+
                             }
                         }
                     });
