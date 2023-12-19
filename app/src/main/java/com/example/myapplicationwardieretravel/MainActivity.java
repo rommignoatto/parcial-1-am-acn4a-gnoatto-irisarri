@@ -115,6 +115,8 @@ public void checkConnection(){
                                             .update("verificado", "true");
                                     Log.d(TAG, id + " => " + data);
                                     Log.i("firebase firestore, ","nombre: " + user.getNombre());
+
+                                    mostrarMensajeBienvenida(user.getNombre());
                                 }
                             } else {
                                 Log.w(TAG, "Error getting documents.", task.getException());
@@ -154,6 +156,11 @@ public void checkConnection(){
         }
 
     }
+
+    private void mostrarMensajeBienvenida(String nombre) {
+        Toast.makeText(getApplicationContext(), "¡Bienvenid@, " + nombre + "!", Toast.LENGTH_SHORT).show();
+    }
+
     public void logout (View v){
         mAuth.signOut();
         Intent intent = new Intent(getApplicationContext(), LoginActivity.class);
