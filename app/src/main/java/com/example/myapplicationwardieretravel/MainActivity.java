@@ -163,6 +163,7 @@ public void checkConnection(){
 
     public void openActivityHotel(View view){
         Intent intent = new Intent(this, MainActivityHoteles.class);
+        intent.putExtra("Nuevo Hotel ", "Soy un Hotel");
 
         startActivity(intent);
 
