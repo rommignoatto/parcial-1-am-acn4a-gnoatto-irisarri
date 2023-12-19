@@ -4,6 +4,7 @@ import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.app.ProgressDialog;
+import android.content.Intent;
 import android.os.AsyncTask;
 import android.os.Bundle;
 import android.util.Log;
@@ -33,6 +34,12 @@ public class MainActivityHoteles extends AppCompatActivity implements View.OnCli
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main_hoteles);
+        Intent intent = this.getIntent();
+        String nuevoHotel = null;
+        if(intent.hasExtra(nuevoHotel)){
+            Log.i("mensaaje","llego el dato bien");
+        }
+
         ImageView imageView = (ImageView) findViewById(R.id.imageView6);
         imageView.setOnClickListener(this);
 
