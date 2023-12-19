@@ -293,6 +293,14 @@
                                 android:textStyle="bold">
 
                             </TextView>
+                            <TextView
+                                android:id="@+id/textViewTemperaturaLondres"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="15dp"
+                                android:text="Temperatura: "
+                                android:textColor="@color/primaryDark"
+                                android:textSize="16sp" />
 
                             <LinearLayout
                                 android:layout_width="wrap_content"
