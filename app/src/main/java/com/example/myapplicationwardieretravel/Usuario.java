@@ -4,7 +4,7 @@ public class Usuario {
 
         private String apellido;
         private String nombre;
-        private boolean verificado;
+        private Boolean verificado;
         private String uid;
 
         public String getApellido() {
@@ -23,11 +23,11 @@ public class Usuario {
             this.nombre = nombre;
         }
 
-        public boolean isVerificado() {
+        public Boolean isVerificado() {
             return verificado;
         }
 
-        public void setVerificado(boolean verificado) {
+        public void setVerificado(Boolean verificado) {
             this.verificado = verificado;
         }
 

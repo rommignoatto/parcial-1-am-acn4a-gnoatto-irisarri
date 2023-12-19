@@ -120,7 +120,7 @@ public void checkConnection(){
                                     db
                                             .collection("users")
                                             .document(id)
-                                            .update("verificado", "true");
+                                            .update("verificado", true);
                                     Log.d(TAG, id + " => " + data);
                                     Log.i("firebase firestore, ","nombre: " + user.getNombre());
 
