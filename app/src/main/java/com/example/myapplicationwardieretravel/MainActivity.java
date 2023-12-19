@@ -36,6 +36,7 @@ public class MainActivity extends AppCompatActivity {
     Button buyButtonBarcelona;
     Button buyButtonParis;
 
+    private Usuario user;
     public void checkConnectionOnClick(View view){
         checkConnection();
     }
@@ -87,9 +88,14 @@ public void checkConnection(){
     public void onStart() {
         super.onStart();
         // Check if user is signed in (non-null) and update UI accordingly.
+        Log.i("prueba", "onStart is called");
         FirebaseUser currentUser = mAuth.getCurrentUser();
+
+
+
         if(currentUser != null){
-/*            db.collection("users")
+            String uid = currentUser.getUid();
+            db.collection("users")
                     .whereEqualTo("uid", uid)
                     .get()
                     .addOnCompleteListener(new OnCompleteListener<QuerySnapshot>() {
@@ -100,19 +106,22 @@ public void checkConnection(){
                                     String id = document.getId();
                                     Object data = document.getData();
 
+                                    user=document.toObject(Usuario.class);
+
+
                                     db
                                             .collection("users")
                                             .document(id)
                                             .update("verificado", "true");
                                     Log.d(TAG, id + " => " + data);
-
+                                    Log.i("firebase firestore, ","nombre: " + user.getNombre());
                                 }
                             } else {
                                 Log.w(TAG, "Error getting documents.", task.getException());
                             }
                         }
-                    });*/
-            String uid = currentUser.getUid();
+                    });
+         /*   String uid = currentUser.getUid();
             db
                     .collection("users")
                     .get()
@@ -122,14 +131,14 @@ public void checkConnection(){
                             if(task.isSuccessful()){
                                 for( QueryDocumentSnapshot documento: task.getResult()) {
                                     String id = documento.getId();
-                                    Object data = (Object)  documento.getData();
-                                    Log.i("firebase firestore", "id: " + id + " data:"+ data.toString());
+                                    Object data = (Object) documento.getData();
+                                    Log.i("prueba", "id: " + id + " data:"+ data.toString());
                                 }
 
 
                             }
                         }
-                    });
+                    });*/
 
             if(currentUser.isEmailVerified()){
                 Log.i("firebase", "hay usuario");
