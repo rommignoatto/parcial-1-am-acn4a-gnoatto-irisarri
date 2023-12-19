@@ -36,6 +36,8 @@ public class MainActivity extends AppCompatActivity {
     Button buyButtonBarcelona;
     Button buyButtonParis;
 
+    Button btnLogout;
+
     private Usuario user;
     public void checkConnectionOnClick(View view){
         checkConnection();
@@ -68,6 +70,12 @@ public void checkConnection(){
         buyButtonBarcelona = findViewById(R.id.buyButtonBarcelona);
         buyButtonParis = findViewById(R.id.buyButtonParis);
         ImageView profileIcon = findViewById(R.id.profile_icon);
+
+        btnLogout = findViewById(R.id.button2);
+        btnLogout.setOnClickListener(view->{
+            mAuth.signOut();
+            startActivity(new Intent(MainActivity.this, LoginActivity.class));
+        });
 
         profileIcon.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -123,24 +131,6 @@ public void checkConnection(){
                             }
                         }
                     });
-         /*   String uid = currentUser.getUid();
-            db
-                    .collection("users")
-                    .get()
-                    .addOnCompleteListener(new OnCompleteListener<QuerySnapshot>() {
-                        @Override
-                        public void onComplete(@NonNull Task<QuerySnapshot> task) {
-                            if(task.isSuccessful()){
-                                for( QueryDocumentSnapshot documento: task.getResult()) {
-                                    String id = documento.getId();
-                                    Object data = (Object) documento.getData();
-                                    Log.i("prueba", "id: " + id + " data:"+ data.toString());
-                                }
-
-
-                            }
-                        }
-                    });*/
 
             if(currentUser.isEmailVerified()){
                 Log.i("firebase", "hay usuario");
