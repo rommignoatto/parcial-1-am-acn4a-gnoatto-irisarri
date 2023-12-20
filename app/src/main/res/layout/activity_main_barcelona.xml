@@ -62,7 +62,7 @@
         <ImageView
             android:id="@+id/paqueteBarcelona"
             android:layout_width="match_parent"
-            android:layout_height="200dp"
+            android:layout_height="182dp"
             android:layout_gravity="center_horizontal|top"
             android:scaleType="fitStart"
             android:src="@drawable/barcelonaidn" />
@@ -128,7 +128,7 @@
             android:id="@+id/mapBarcelona"
             android:name="com.google.android.gms.maps.SupportMapFragment"
             android:layout_width="match_parent"
-            android:layout_height="76dp"
+            android:layout_height="90dp"
 
             map:uiRotateGestures="true"
             map:uiZoomControls="true"></fragment>
